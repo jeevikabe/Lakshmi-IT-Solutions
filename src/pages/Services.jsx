@@ -17,7 +17,7 @@ export default function Services() {
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h1 className="text-4xl font-black tracking-tight text-slate-950">Enterprise Technical Services</h1>
         <p className="text-slate-600 mt-4 text-lg">
-          TechCraft delivers production-grade consulting and execution assets mapped to contemporary performance benchmarks.
+          Lakshmi IT Solutions delivers production-grade consulting and execution assets mapped to contemporary performance benchmarks.
         </p>
       </div>
 

@@ -13,7 +13,7 @@ export default function TermsOfService() {
       <div className="space-y-6 text-sm leading-relaxed">
         <section>
           <h2 className="text-lg font-bold text-slate-900 mb-2">1. Scope of Architectural Services</h2>
-          <p>TechCraft delivers custom software design, dedicated cloud infrastructure automation, and native engineering services. All system requirements are explicitly structured through binding Service Level Agreements (SLAs).</p>
+          <p>Lakshmi IT Solutions delivers custom software design, dedicated cloud infrastructure automation, and native engineering services. All system requirements are explicitly structured through binding Service Level Agreements (SLAs).</p>
         </section>
 
         <section>
@@ -23,7 +23,7 @@ export default function TermsOfService() {
 
         <section>
           <h2 className="text-lg font-bold text-slate-900 mb-2">3. System Operations & Performance Limitations</h2>
-          <p>While we architect highly redundant environments with up to 99.99% uptime configurations, TechCraft is not liable for intermittent upstream cloud host provider outages originating from core datacenters.</p>
+          <p>While we architect highly redundant environments with up to 99.99% uptime configurations, Lakshmi IT Solutions is not liable for intermittent upstream cloud host provider outages originating from core datacenters.</p>
         </section>
       </div>
     </div>

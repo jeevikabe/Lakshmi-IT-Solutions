@@ -13,7 +13,7 @@ export default function PrivacyPolicy() {
       <div className="space-y-6 text-sm leading-relaxed">
         <section>
           <h2 className="text-lg font-bold text-slate-900 mb-2">1. Data Encryption & Security</h2>
-          <p>At TechCraft, infrastructure security is fundamental. All client information, code repositories, and structural metrics are protected via AES-256 end-to-end encryption protocols during data transit and rest phases.</p>
+          <p>At Lakshmi IT Solutions, infrastructure security is fundamental. All client information, code repositories, and structural metrics are protected via AES-256 end-to-end encryption protocols during data transit and rest phases.</p>
         </section>
 
         <section>
