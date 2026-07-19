@@ -22,9 +22,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-2 font-black text-xl tracking-wider text-blue-400">
+          {/* <Link to="/" className="flex items-center gap-2 font-black text-xl tracking-wider text-blue-400">
             <Layers size={24} className="text-blue-500 animate-pulse" />
             <span>TECHCRAFT</span>
+          </Link> */}
+
+          {/* Brand Logo */}
+          <Link to="/" className="flex items-center gap-2 font-black text-xl tracking-wider text-blue-400">
+            <Layers size={24} className="text-blue-500 animate-pulse" />
+            <span>LAKSHMI IT SOLUTIONS</span>
           </Link>
 
           {/* Desktop Navigation (Hidden on Mobile) */}

@@ -42,30 +42,29 @@ export default function Home() {
       <section className="max-w-6xl mx-auto py-16 px-4 -mt-10 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
-          {/* Direct Hot Line Card */}
-          <a href="tel:+1234567890" className="flex items-start gap-4 p-6 bg-white border border-slate-100 shadow-xl shadow-slate-200/50 rounded-2xl hover:border-blue-500/30 transition-all duration-300 group">
-            <div className="p-3 bg-blue-50 text-blue-600 rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-              <Phone size={24} />
-            </div>
-            <div>
-              <h3 className="font-bold text-slate-900 mb-1">Direct Consulting</h3>
-              <p className="text-sm text-slate-500 mb-2">Available Mon - Fri, 9am - 6pm</p>
-              <span className="text-sm font-semibold text-blue-600 group-hover:underline">+91 7892780318</span>
-            </div>
-          </a>
+{/* Direct Hot Line Card */}
+    <a href="tel:+917892780318" className="flex items-start gap-4 p-6 bg-white border border-slate-100 shadow-xl shadow-slate-200/50 rounded-2xl hover:border-blue-500/30 transition-all duration-300 group">
+      <div className="p-3 bg-blue-50 text-blue-600 rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+        <Phone size={24} />
+      </div>
+      <div>
+        <h3 className="font-bold text-slate-900 mb-1">Direct Consulting Hot Line</h3>
+        <p className="text-sm text-slate-500 mb-2">Available Mon - Fri, 9am - 6pm</p>
+        <span className="text-sm font-semibold text-blue-600 group-hover:underline">+91 78927 80318</span>
+      </div>
+    </a>
 
-          {/* Instant WhatsApp Gateway Card */}
-          {/* Replace phone number parameter with your real country code + phone digits */}
-          <a href="https://wa.me/1234567890?text=Hi%20TechCraft%2C%20I'd%20like%20to%20schedule%20an%20architectural%20consultation." target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-6 bg-white border border-slate-100 shadow-xl shadow-slate-200/50 rounded-2xl hover:border-emerald-500/30 transition-all duration-300 group">
-            <div className="p-3 bg-emerald-50 text-emerald-600 rounded-xl group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
-              <MessageSquare size={24} />
-            </div>
-            <div>
-              <h3 className="font-bold text-slate-900 mb-1">Instant WhatsApp Business</h3>
-              <p className="text-sm text-slate-500 mb-2">Rapid chat response pipeline</p>
-              <span className="text-sm font-semibold text-emerald-600 group-hover:underline">Chat with Operations →</span>
-            </div>
-          </a>
+    {/* Instant WhatsApp Gateway Card */}
+    <a href="https://wa.me/917892780318?text=Hi%20Jetwave%2C%20I'd%20like%20to%20schedule%20an%20architectural%20consultation." target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-6 bg-white border border-slate-100 shadow-xl shadow-slate-200/50 rounded-2xl hover:border-emerald-500/30 transition-all duration-300 group">
+      <div className="p-3 bg-emerald-50 text-emerald-600 rounded-xl group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+        <MessageSquare size={24} />
+      </div>
+      <div>
+        <h3 className="font-bold text-slate-900 mb-1">Instant WhatsApp Business</h3>
+        <p className="text-sm text-slate-500 mb-2">Rapid chat response pipeline</p>
+        <span className="text-sm font-semibold text-emerald-600 group-hover:underline">Chat with Operations →</span>
+      </div>
+    </a>
 
           {/* Corporate Network Hub Card */}
           <div className="flex flex-col justify-between p-6 bg-white border border-slate-100 shadow-xl shadow-slate-200/50 rounded-2xl">
