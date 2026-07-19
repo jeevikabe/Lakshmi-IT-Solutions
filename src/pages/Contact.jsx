@@ -26,7 +26,7 @@ export default function Contact() {
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Project Scope</label>
             <select value={formData.projectType} onChange={e => setFormData({...formData, projectType: e.target.value})} className="w-full border border-slate-200 p-3 rounded-lg focus:outline-none focus:border-brandAccent">
-              <option value="Web">Web Application / SaaS</option>
+              <option value="Web">Web Application</option>
               <option value="Mobile">Mobile App (iOS/Android)</option>
               <option value="Both">Both (Cross-platform System)</option>
             </select>

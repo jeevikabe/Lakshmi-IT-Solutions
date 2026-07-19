@@ -48,9 +48,9 @@ export default function Home() {
               <Phone size={24} />
             </div>
             <div>
-              <h3 className="font-bold text-slate-900 mb-1">Direct Consulting Hot Line</h3>
-              <p className="text-sm text-slate-500 mb-2">Available Mon - Fri, 9am - 6pm EST</p>
-              <span className="text-sm font-semibold text-blue-600 group-hover:underline">+1 (234) 567-890</span>
+              <h3 className="font-bold text-slate-900 mb-1">Direct Consulting</h3>
+              <p className="text-sm text-slate-500 mb-2">Available Mon - Fri, 9am - 6pm</p>
+              <span className="text-sm font-semibold text-blue-600 group-hover:underline">+91 7892780318</span>
             </div>
           </a>
 
