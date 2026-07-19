@@ -11,8 +11,9 @@ import TermsOfService from './pages/TermsOfService';
 
 export default function App() {
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen bg-slate-50 font-sans">
+    // The basename parameter handles the subfolder path cleanly on GitHub Pages
+    <Router basename="/TechCraft">
+      <div className="flex flex-col min-h-screen bg-slate-50 font-sans overflow-x-hidden">
         <Navbar />
         
         <main className="flex-grow">
@@ -27,16 +28,16 @@ export default function App() {
           </Routes>
         </main>
         
-        {/* Professional Enterprise Footer */}
-        <footer className="bg-brandDark text-slate-400 py-12 border-t border-slate-800 px-6">
-          <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
-            <span className="text-slate-500 text-sm">
+        {/* Responsive Professional Footer */}
+        <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 px-6 w-full">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <span className="text-slate-500 text-sm order-2 md:order-1">
               © {new Date().getFullYear()} TechCraft. All rights reserved.
             </span>
-            <div className="flex gap-6 text-sm font-medium text-slate-500">
-              <Link to="/privacy" className="hover:text-brandAccent transition">Privacy Policy</Link>
-              <span>•</span>
-              <Link to="/terms" className="hover:text-brandAccent transition">Terms of Service</Link>
+            <div className="flex flex-wrap justify-center gap-6 text-sm font-medium text-slate-400 order-1 md:order-2">
+              <Link to="/privacy" className="hover:text-blue-400 transition-colors duration-200">Privacy Policy</Link>
+              <span className="hidden sm:inline text-slate-700">•</span>
+              <Link to="/terms" className="hover:text-blue-400 transition-colors duration-200">Terms of Service</Link>
             </div>
           </div>
         </footer>

@@ -1,92 +1,91 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Phone, MessageSquare, Linkedin, Twitter, Github, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Cpu, Globe, CheckCircle, Award, ShieldCheck } from 'lucide-react';
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Triggers the sleek entry animation sequence on component load
+    setIsVisible(true);
+  }, []);
+
   return (
-    <div className="bg-slate-50 text-slate-900">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-brandDark text-white py-24 px-6">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-sky-900/40 via-transparent to-transparent"></div>
-        <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <span className="text-brandAccent text-sm font-semibold tracking-wider uppercase bg-sky-950 px-3 py-1.5 rounded-full border border-sky-800">
-              Next-Gen IT Architectures
-            </span>
-            <h1 className="text-4xl sm:text-6xl font-black tracking-tight mt-4 leading-tight">
-              We Craft Digital <span className="text-brandAccent">Infrastructure</span>
-            </h1>
-            <p className="mt-6 text-lg text-slate-300 max-w-xl leading-relaxed">
-              TechCraft designs, deploys, and scales custom cloud platforms, high-performance web systems, and dedicated enterprise operations globally.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/contact" className="bg-brandAccent text-brandDark px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-sky-400 transition group shadow-lg shadow-sky-500/10">
-                Consult Our Engineers <ArrowRight size={18} className="group-hover:translate-x-1 transition" />
-              </Link>
-              <Link to="/services" className="border border-slate-700 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold transition">
-                Explore Core Capabilities
-              </Link>
-            </div>
-          </div>
-          <div className="hidden lg:block relative">
-            <div className="w-full h-96 bg-gradient-to-tr from-slate-800 to-slate-900 rounded-2xl border border-slate-700 shadow-2xl overflow-hidden flex items-center justify-center p-8">
-              <div className="space-y-4 w-full">
-                <div className="h-3 bg-slate-700 rounded w-3/4 animate-pulse"></div>
-                <div className="h-3 bg-slate-700 rounded w-1/2 animate-pulse"></div>
-                <div className="h-20 bg-brandDark/50 rounded border border-slate-800 p-3 flex justify-between items-center">
-                  <Cpu className="text-brandAccent animate-spin [animation-duration:8s]" />
-                  <div className="h-2 bg-slate-700 rounded w-2/3"></div>
-                </div>
-              </div>
-            </div>
+    <div className="w-full min-h-screen bg-slate-50">
+      {/* Animated Hero Section */}
+      <section className="relative flex items-center justify-center py-20 md:py-32 px-4 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-950 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_50%)]" />
+        
+        <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <span className="inline-block bg-blue-500/10 text-blue-400 border border-blue-500/20 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6 backdrop-blur-sm">
+            Next-Gen Digital Architecture
+          </span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-blue-200">
+            Architecting Scalable Engineering Solutions
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 px-2 leading-relaxed">
+            We build performant applications, optimize critical cloud systems, and deliver cutting-edge technical design custom tailored for industry leaders.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
+            <Link to="/contact" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-medium shadow-lg shadow-blue-600/20 transition-all duration-200 flex items-center justify-center gap-2 group">
+              Start Project Development
+              <ArrowRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link to="/services" className="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-800 border border-slate-700 text-slate-200 px-8 py-4 rounded-xl font-medium transition-colors duration-200 flex items-center justify-center">
+              Explore Services
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Corporate Trust Matrix */}
-      <section className="py-12 bg-white border-b border-slate-100">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <h4 className="text-3xl font-extrabold text-slate-900">99.99%</h4>
-            <p className="text-sm text-slate-500 mt-1">Infrastructure Uptime</p>
-          </div>
-          <div>
-            <h4 className="text-3xl font-extrabold text-slate-900">250+</h4>
-            <p className="text-sm text-slate-500 mt-1">Platforms Deployed</p>
-          </div>
-          <div>
-            <h4 className="text-3xl font-extrabold text-slate-900">15M+</h4>
-            <p className="text-sm text-slate-500 mt-1">End Users Managed</p>
-          </div>
-          <div>
-            <h4 className="text-3xl font-extrabold text-slate-900">24/7</h4>
-            <p className="text-sm text-slate-500 mt-1">DevOps Monitoring</p>
-          </div>
-        </div>
-      </section>
+      {/* Professional Connection & Communication Architecture */}
+      <section className="max-w-6xl mx-auto py-16 px-4 -mt-10 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          {/* Direct Hot Line Card */}
+          <a href="tel:+1234567890" className="flex items-start gap-4 p-6 bg-white border border-slate-100 shadow-xl shadow-slate-200/50 rounded-2xl hover:border-blue-500/30 transition-all duration-300 group">
+            <div className="p-3 bg-blue-50 text-blue-600 rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+              <Phone size={24} />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 mb-1">Direct Consulting Hot Line</h3>
+              <p className="text-sm text-slate-500 mb-2">Available Mon - Fri, 9am - 6pm EST</p>
+              <span className="text-sm font-semibold text-blue-600 group-hover:underline">+1 (234) 567-890</span>
+            </div>
+          </a>
 
-      {/* Why Choose Us Feature Blocks */}
-      <section className="py-20 px-6 max-w-6xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold tracking-tight">Engineered for Massive Scale</h2>
-          <p className="text-slate-600 mt-3">We eliminate legacy technological technical debt and substitute systems with streamlined, modern automation architectures.</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-8 bg-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition">
-            <div className="p-3 bg-sky-50 text-brandAccent rounded-xl w-fit mb-6"><Globe size={24} /></div>
-            <h3 className="text-xl font-bold mb-3">Global Cloud Infrastructure</h3>
-            <p className="text-slate-600 text-sm leading-relaxed">Multi-region distributed application layers deployed across AWS, GCP, and Azure frameworks.</p>
+          {/* Instant WhatsApp Gateway Card */}
+          {/* Replace phone number parameter with your real country code + phone digits */}
+          <a href="https://wa.me/1234567890?text=Hi%20TechCraft%2C%20I'd%20like%20to%20schedule%20an%20architectural%20consultation." target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-6 bg-white border border-slate-100 shadow-xl shadow-slate-200/50 rounded-2xl hover:border-emerald-500/30 transition-all duration-300 group">
+            <div className="p-3 bg-emerald-50 text-emerald-600 rounded-xl group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+              <MessageSquare size={24} />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 mb-1">Instant WhatsApp Business</h3>
+              <p className="text-sm text-slate-500 mb-2">Rapid chat response pipeline</p>
+              <span className="text-sm font-semibold text-emerald-600 group-hover:underline">Chat with Operations →</span>
+            </div>
+          </a>
+
+          {/* Corporate Network Hub Card */}
+          <div className="flex flex-col justify-between p-6 bg-white border border-slate-100 shadow-xl shadow-slate-200/50 rounded-2xl">
+            <div>
+              <h3 className="font-bold text-slate-900 mb-1">Corporate Networks</h3>
+              <p className="text-sm text-slate-500 mb-4">Follow our operational infrastructure updates.</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-50 hover:bg-blue-50 text-slate-600 hover:text-blue-600 rounded-xl border border-slate-100 transition-all duration-200 flex-1 flex justify-center">
+                <Linkedin size={20} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-50 hover:bg-sky-50 text-slate-600 hover:text-sky-400 rounded-xl border border-slate-100 transition-all duration-200 flex-1 flex justify-center">
+                <Twitter size={20} />
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-50 hover:bg-slate-900 text-slate-600 hover:text-white rounded-xl border border-slate-100 transition-all duration-200 flex-1 flex justify-center">
+                <Github size={20} />
+              </a>
+            </div>
           </div>
-          <div className="p-8 bg-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition">
-            <div className="p-3 bg-emerald-50 text-emerald-600 rounded-xl w-fit mb-6"><ShieldCheck size={24} /></div>
-            <h3 className="text-xl font-bold mb-3">Enterprise Data Security</h3>
-            <p className="text-slate-600 text-sm leading-relaxed">End-to-end operational pipelines fitted with advanced encryption layers and proactive threat containment systems.</p>
-          </div>
-          <div className="p-8 bg-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition">
-            <div className="p-3 bg-indigo-50 text-indigo-600 rounded-xl w-fit mb-6"><Award size={24} /></div>
-            <h3 className="text-xl font-bold mb-3">Service Level Agreements</h3>
-            <p className="text-slate-600 text-sm leading-relaxed">Guaranteed deployment cycles with dedicated account engineers providing permanent runtime monitoring support.</p>
-          </div>
+
         </div>
       </section>
     </div>
